@@ -77,7 +77,6 @@ The project is divided into four major phases:
 
 * Developed recommendations to improve customer engagement and business performance.
 
-![Dashboard Overview](dashboard.png)
 
 ![Power BI Dashboard](dashboard.png)
 ## 📁 Project Structure
