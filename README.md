@@ -1,12 +1,13 @@
-**Customer Behavior Data Analyst Project👨🏻‍💻**
+## Customer Behavior Data Analyst Project👨🏻‍💻
+
 An end-to-end **Customer Behavior Analysis** project using Python, SQL (PostgreSQL), and Power BI to transform raw retail customer data into meaningful business insights and data-driven recommendations.
 This project demonstrates a complete data analytics workflow, covering data cleaning, exploratory data analysis (EDA), database integration, SQL analysis, and interactive dashboard development.
 
-**🎯 Project Overview**
+## 🎯 Project Overview
 The primary objective of this project is to analyze customer shopping behavior, identify purchasing patterns, understand customer segments, and generate actionable business insights.
 The project follows a real-world data analytics workflow, similar to the responsibilities of a professional Data Analyst.
 
-**Key Objectives**
+## Key Objectives
 - Clean and prepare raw customer shopping data.
 - Perform Exploratory Data Analysis (EDA) using Python.
 - Store and manage structured data using PostgreSQL.
