@@ -77,7 +77,7 @@ The project is divided into four major phases:
 
 * Developed recommendations to improve customer engagement and business performance.
 
-![Dashboard Overview](images/dashboard.png)
+![Dashboard Overview](dashboard.png)
 
 ## 📁 Project Structure
 
