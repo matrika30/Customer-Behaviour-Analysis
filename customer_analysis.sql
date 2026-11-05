@@ -7,7 +7,7 @@ group by gender
 --Q2. Which customers used a discount but still spent more than the average purchase amount? 
 select customer_id, purchase_amount 
 from customers 
-where discount_applied = 'Yes' and purchase_amount >= (select AVG(purchase_amount) from customer)
+where discount_applied = 'Yes' and purchase_amount >= (select AVG(purchase_amount) from customers)
 
 
 -- Q3. Which are the top 5 products with the highest average review rating?
@@ -45,32 +45,47 @@ LIMIT 5;
 
 --Q7. Segment customers into New, Returning, and Loyal based on their total 
 -- number of previous purchases, and show the count of each segment. 
-with customer_type as (
-SELECT customer_id, previous_purchases,
-CASE 
-    WHEN previous_purchases = 1 THEN 'New'
-    WHEN previous_purchases BETWEEN 2 AND 10 THEN 'Returning'
-    ELSE 'Loyal'
-    END AS customer_segment
-FROM customers)
 
-select customer_segment,count(*) AS "Number of Customers" 
-from customer_type 
-group by customer_segment;
+WITH customer_type AS (
+    SELECT
+        customer_id,
+        previous_purchases,
+        CASE
+            WHEN previous_purchases = 0 THEN 'New'
+            WHEN previous_purchases BETWEEN 1 AND 10 THEN 'Returning'
+            ELSE 'Loyal'
+        END AS customer_segment
+    FROM customers
+)
 
+SELECT
+    customer_segment,
+    COUNT(*) AS number_of_customers
+FROM customer_type
+GROUP BY customer_segment
+ORDER BY number_of_customers DESC;
 --Q8. What are the top 3 most purchased products within each category? 
 WITH item_counts AS (
-    SELECT category,
-           item_purchased,
-           COUNT(customer_id) AS total_orders,
-           ROW_NUMBER() OVER (PARTITION BY category ORDER BY COUNT(customer_id) DESC) AS item_rank
+    SELECT
+        category,
+        item_purchased,
+        COUNT(*) AS total_orders,
+        DENSE_RANK() OVER (
+            PARTITION BY category
+            ORDER BY COUNT(*) DESC
+        ) AS item_rank
     FROM customers
     GROUP BY category, item_purchased
 )
-SELECT item_rank,category, item_purchased, total_orders
+
+SELECT
+    item_rank,
+    category,
+    item_purchased,
+    total_orders
 FROM item_counts
-WHERE item_rank <=3;
- 
+WHERE item_rank <= 3
+ORDER BY category, item_rank;
 --Q9. Are customers who are repeat buyers (more than 5 previous purchases) also likely to subscribe?
 SELECT subscription_status,
        COUNT(customer_id) AS repeat_buyers
