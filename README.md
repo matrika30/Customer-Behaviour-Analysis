@@ -84,17 +84,16 @@ The project is divided into four major phases:
 The Power BI dashboard focuses on visualizing important customer shopping metrics and patterns.
 
 ```text
-Customer-Behavior-Analysis/
-├── dataset/
-│   └── customer_behavior.csv
-├── python/
-│   └── customer_behavior.py
-├── sql/
-│   └── customer_behavior_queries.sql
-├── powerbi/
-│   └── customer_behavior.pbix
-└── images/
-    └── dashboard.png
+Customer-Behaviour-Analysis/
+│
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── customer_shopping_behavior.csv
+├── customer_behaviour.py
+├── customer_analysis.sql
+├── Customer-behaviour.pbix
+└── dashboard.png
 ```
 
 **🚀 Getting Started**
