@@ -1,1 +1,6 @@
-pip freeze > requirements.txt
+pandas
+numpy
+matplotlib
+seaborn
+sqlalchemy
+psycopg2-binary
