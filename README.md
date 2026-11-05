@@ -79,6 +79,7 @@ The project is divided into four major phases:
 
 ![Dashboard Overview](dashboard.png)
 
+![Power BI Dashboard](dashboard.png)
 ## 📁 Project Structure
 
 The Power BI dashboard focuses on visualizing important customer shopping metrics and patterns.
