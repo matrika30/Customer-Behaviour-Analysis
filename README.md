@@ -87,7 +87,7 @@ The Power BI dashboard focuses on visualizing important customer shopping metric
 Customer-Behaviour-Analysis/
 │
 ├── README.md
-├── requirement.txt
+├── requirements.txt
 ├── .gitignore
 ├── customer_shopping_behavior.csv
 ├── customer_behaviour.py
