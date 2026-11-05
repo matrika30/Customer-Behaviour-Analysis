@@ -75,30 +75,27 @@ The project is divided into four major phases:
 
 ## 📊 Dashboard Preview
 
-The Power BI dashboard focuses on visualizing important customer shopping metrics and patterns.
-![Dashboard Overview](images/dashboard.png)
+* Developed recommendations to improve customer engagement and business performance.
 
+![Dashboard Overview](images/dashboard.png)
 
 ## 📁 Project Structure
 
+The Power BI dashboard focuses on visualizing important customer shopping metrics and patterns.
+
+```text
 Customer-Behavior-Analysis/
-│
 ├── dataset/
 │   └── customer_behavior.csv
-│
 ├── python/
 │   └── customer_behavior.py
-│
 ├── sql/
 │   └── customer_behavior_queries.sql
-│
 ├── powerbi/
-│   └── customer_behavior_dashboard.pbix
-│
-├── images/
-│   └── dashboard.png
-│
-└── README.md
+│   └── customer_behavior.pbix
+└── images/
+    └── dashboard.png
+```
 
 **🚀 Getting Started**
 Follow these steps to run the project locally.
